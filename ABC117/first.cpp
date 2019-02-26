@@ -4,9 +4,11 @@ using namespace std;
 
 
 int  main(){
-    int N=0;
+    double N=0,T;
 
-    long long ans=0;
+    cin>>T>>N;
 
-    cout<<ans<<endl;
+    double ans=T/N;
+
+    printf("%.5f\n",ans);
 }

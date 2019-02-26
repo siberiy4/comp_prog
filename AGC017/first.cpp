@@ -1,42 +1,31 @@
 #include<iostream>
-#include<vector>
-
+#include<cmath>
 using namespace std;
 
 int main(){
-
-    int N,P;
-
-    cin>>N>>P;
-/*
-    vector<int> bis(N);
-
-    for(auto &x:bis){
-        cin>>x;
-    }
-*/
-
-    int odd=0,eve=0;
-
-    for(int i=0;i<N;i++){
-        int t;
-        cin>>t;
-
-        if(t%2==0){
-            eve++;
-        }else{
-            odd++;
+    int N;
+    cin>>N;
+    int P;
+    cin>>P;
+    int cnt=0;
+    for(int i=0;i<N;++i){
+        int tmp;
+        cin>>tmp;
+        if(tmp%2==0){
+            cnt++;
         }
     }
-
-    long ans=0;
-
-
-    if(P&&odd==0){
-        cout<<0<<endl;
-        return 0;
+    if(cnt==N){
+        if(P==1){cout<<0<<endl;
+        }else{
+            long long ans=pow(2,N);
+            cout<<ans<<endl;
+        }
+    }else{
+        long long ans=pow(2,N-1);
+        cout<<ans<<endl;
     }
-    if(!P&&odd)
 
 
+    
 }
