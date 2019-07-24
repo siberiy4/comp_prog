@@ -3,11 +3,12 @@
 using namespace std;
 
 int main(){
-    int N;
-
+    int N,ans=0;
 
     cin>>N;
-    int ans=(N/10)*100+((N%10)<7?N%10*15:100);
+    for(int i=1;i<=N;++i){
+        ans+=i;
+    }
 
     cout<<ans<<endl;
 }
